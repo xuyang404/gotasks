@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="10812ce0-d3e2-4e7c-9896-a60778f7c1a9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15/libexec" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1rEc83ZdE2OPTO84KkLpM6LVMWg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/json" />
+      <recent name="$PROJECT_DIR$/brokers" />
+      <recent name="$PROJECT_DIR$/tasks" />
+      <recent name="$PROJECT_DIR$/redis" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.TestQueue in gotasks">
+    <configuration name="TestCallHandle in gotasks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gotasks" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="gotasks" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestCallHandle$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestQueue in gotasks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gotasks" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="gotasks" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestQueue$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWorker in gotasks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gotasks" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="gotasks" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestWorker$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="queue_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gotasks" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="gotasks" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/queue_test.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="worker_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gotasks" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="gotasks" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/worker_test.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestQueue in gotasks" />
+        <item itemvalue="Go Test.TestWorker in gotasks" />
+        <item itemvalue="Go Test.queue_test.go" />
+        <item itemvalue="Go Test.worker_test.go" />
+        <item itemvalue="Go Test.TestCallHandle in gotasks" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn,direct" />
+      </map>
+    </environment>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1140" y="216" key="#com.intellij.ide.util.MemberChooser" timestamp="1618627105288">
+      <screen x="0" y="23" width="2560" height="987" />
+    </state>
+    <state x="1140" y="216" key="#com.intellij.ide.util.MemberChooser/0.23.2560.987@0.23.2560.987" timestamp="1618627105288" />
+    <state width="1884" height="413" key="GridCell.Tab.0.bottom" timestamp="1618989876516">
+      <screen x="0" y="23" width="2560" height="987" />
+    </state>
+    <state width="1884" height="413" key="GridCell.Tab.0.bottom/0.23.2560.987@0.23.2560.987" timestamp="1618989876516" />
+    <state width="1884" height="413" key="GridCell.Tab.0.center" timestamp="1618989876516">
+      <screen x="0" y="23" width="2560" height="987" />
+    </state>
+    <state width="1884" height="413" key="GridCell.Tab.0.center/0.23.2560.987@0.23.2560.987" timestamp="1618989876516" />
+    <state width="1884" height="413" key="GridCell.Tab.0.left" timestamp="1618989876515">
+      <screen x="0" y="23" width="2560" height="987" />
+    </state>
+    <state width="1884" height="413" key="GridCell.Tab.0.left/0.23.2560.987@0.23.2560.987" timestamp="1618989876515" />
+    <state width="1884" height="413" key="GridCell.Tab.0.right" timestamp="1618989876516">
+      <screen x="0" y="23" width="2560" height="987" />
+    </state>
+    <state width="1884" height="413" key="GridCell.Tab.0.right/0.23.2560.987@0.23.2560.987" timestamp="1618989876516" />
+    <state x="936" y="254" width="584" height="474" key="find.popup" timestamp="1618990035506">
+      <screen x="0" y="23" width="2560" height="987" />
+    </state>
+    <state x="936" y="254" width="584" height="474" key="find.popup/0.23.2560.987@0.23.2560.987" timestamp="1618990035506" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gotasks$queue_test_go.out" NAME="queue_test.go Coverage Results" MODIFIED="1618986071186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
