@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-// 失败队列
-var FatalQueueName = "fatal_queue"
-
 type Worker struct {
 	broker        brokers.Broker
 	errorHandler  func(interface{})
@@ -65,9 +62,6 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 		if r := recover(); r != nil {
 			task.PanicLog = string(debug.Stack())
 			w.broker.Enqueue(task) //再塞回队列重试
-
-			task.QueueName = FatalQueueName
-			w.broker.Update(task) //更新到失败hash中
 		}
 	}()
 
