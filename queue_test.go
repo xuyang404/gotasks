@@ -2,8 +2,8 @@ package gotasks_test
 
 import (
 	"fmt"
-	"gotasks"
-	"gotasks/tasks"
+	"github.com/xuyang404/gotasks"
+	"github.com/xuyang404/gotasks/tasks"
 	"testing"
 )
 

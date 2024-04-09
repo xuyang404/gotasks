@@ -1,8 +1,8 @@
 package gotasks
 
 import (
-	"gotasks/brokers"
-	"gotasks/tasks"
+	"github.com/xuyang404/gotasks/brokers"
+	"github.com/xuyang404/gotasks/tasks"
 )
 
 type Queue struct {

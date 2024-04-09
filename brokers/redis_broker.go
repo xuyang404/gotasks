@@ -2,8 +2,8 @@ package brokers
 
 import (
 	"github.com/go-redis/redis/v7"
-	"gotasks/json"
-	"gotasks/tasks"
+	"github.com/xuyang404/gotasks/json"
+	"github.com/xuyang404/gotasks/tasks"
 	"log"
 )
 

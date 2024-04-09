@@ -2,7 +2,7 @@ package brokers
 
 import (
 	"errors"
-	"gotasks/tasks"
+	"github.com/xuyang404/gotasks/tasks"
 )
 
 var NoDatas = errors.New("queue no data")

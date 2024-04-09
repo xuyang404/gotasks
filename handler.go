@@ -2,7 +2,7 @@ package gotasks
 
 import (
 	"errors"
-	"gotasks/tasks"
+	"github.com/xuyang404/gotasks/tasks"
 	"reflect"
 	"runtime"
 )

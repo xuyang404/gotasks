@@ -2,7 +2,7 @@ package tasks
 
 import (
 	"github.com/google/uuid"
-	"gotasks/json"
+	"github.com/xuyang404/gotasks/json"
 	"time"
 )
 

@@ -2,7 +2,7 @@ package gotasks
 
 import (
 	"fmt"
-	"gotasks/tasks"
+	"github.com/xuyang404/gotasks/tasks"
 	"testing"
 )
 
