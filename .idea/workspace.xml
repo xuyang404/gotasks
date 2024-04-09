@@ -23,17 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10812ce0-d3e2-4e7c-9896-a60778f7c1a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brokers/broker.go" beforeDir="false" afterPath="$PROJECT_DIR$/brokers/broker.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brokers/redis_broker.go" beforeDir="false" afterPath="$PROJECT_DIR$/brokers/redis_broker.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/task.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/worker.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/worker_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +86,7 @@
       <recent name="$PROJECT_DIR$/redis" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestWorker in gotasks (1)">
+  <component name="RunManager" selected="Go Test.TestWorker in github.com/xuyang404/gotasks">
     <configuration name="TestQueue in gotasks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="gotasks" />
       <working_directory value="$PROJECT_DIR$" />
@@ -106,6 +96,17 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^TestQueue$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWorker in github.com/xuyang404/gotasks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gotasks" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/xuyang404/gotasks" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestWorker\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestWorker in gotasks (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -140,23 +141,13 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="worker_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="gotasks" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="gotasks" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/worker_test.go" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestWorker in github.com/xuyang404/gotasks" />
         <item itemvalue="Go Test.TestWorker in gotasks (1)" />
         <item itemvalue="Go Test.TestQueue in gotasks" />
         <item itemvalue="Go Test.TestWorker in gotasks" />
         <item itemvalue="Go Test.queue_test.go" />
-        <item itemvalue="Go Test.worker_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +159,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712642828253</updated>
       <workItem from="1712642829352" duration="1401000" />
-      <workItem from="1712645118300" duration="2713000" />
+      <workItem from="1712645118300" duration="2945000" />
     </task>
     <servers />
   </component>
