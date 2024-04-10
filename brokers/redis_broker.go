@@ -1,7 +1,7 @@
 package brokers
 
 import (
-	"github.com/go-redis/redis/v7"
+	"github.com/go-redis/redis"
 	"github.com/xuyang404/gotasks/json"
 	"github.com/xuyang404/gotasks/tasks"
 	"log"
@@ -13,22 +13,8 @@ type RedisBroker struct {
 	client *redis.Client
 }
 
-func NewRedisBroker(redisURL string) *RedisBroker {
-	options, err := redis.ParseURL(redisURL)
-	if err != nil {
-		log.Panicf("failed to parse brokers URL %s:%s", redisURL, err.Error())
-	}
-
-	rb := &RedisBroker{}
-	rb.client = redis.NewClient(options)
-	return rb
-}
-
-func genSaveTaskName(task *tasks.Task) string {
-	return "gt:" + task.QueueName + ":" + task.TaskName
-}
-
 func (r *RedisBroker) Acquire(queueName string) (*tasks.Task, error) {
+	//TODO implement me
 	task := &tasks.Task{}
 	str, err := r.client.RPop(queueName).Result()
 	if err != nil {
@@ -46,10 +32,12 @@ func (r *RedisBroker) Acquire(queueName string) (*tasks.Task, error) {
 }
 
 func (r *RedisBroker) Ack() bool {
+	//TODO implement me
 	return true
 }
 
 func (r *RedisBroker) Update(task *tasks.Task) error {
+	//TODO implement me
 	b, err := json.Json.Marshal(task)
 	if err != nil {
 		return err
@@ -59,6 +47,7 @@ func (r *RedisBroker) Update(task *tasks.Task) error {
 }
 
 func (r *RedisBroker) Enqueue(task *tasks.Task) (string, error) {
+	//TODO implement me
 	b, err := json.Json.Marshal(task)
 	if err != nil {
 		return "", err
@@ -72,6 +61,17 @@ func (r *RedisBroker) Enqueue(task *tasks.Task) (string, error) {
 }
 
 func (r *RedisBroker) QueueLen(queueName string) int64 {
+	//TODO implement me
 	l, _ := r.client.LLen(queueName).Result()
 	return l
+}
+
+func NewRedisBroker(options *redis.Options) *RedisBroker {
+	rb := &RedisBroker{}
+	rb.client = redis.NewClient(options)
+	return rb
+}
+
+func genSaveTaskName(task *tasks.Task) string {
+	return "gt:" + task.QueueName + ":" + task.TaskName
 }

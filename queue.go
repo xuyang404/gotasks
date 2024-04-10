@@ -1,6 +1,7 @@
 package gotasks
 
 import (
+	"github.com/go-redis/redis"
 	"github.com/xuyang404/gotasks/brokers"
 	"github.com/xuyang404/gotasks/tasks"
 )
@@ -20,8 +21,8 @@ func (q *Queue) SetBroker(broker brokers.Broker) {
 	q.broker = broker
 }
 
-func (q *Queue) UseRedisBroker(redisURL string) {
-	rb := brokers.NewRedisBroker(redisURL)
+func (q *Queue) UseRedisBroker(options *redis.Options) {
+	rb := brokers.NewRedisBroker(options)
 	q.SetBroker(rb)
 }
 

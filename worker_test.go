@@ -2,6 +2,7 @@ package gotasks
 
 import (
 	"fmt"
+	"github.com/go-redis/redis"
 	"github.com/xuyang404/gotasks/tasks"
 	"testing"
 )
@@ -14,7 +15,10 @@ type Mul struct {
 
 func TestWorker(t *testing.T) {
 	worker := NewWorker()
-	worker.UseRedisBroker("redis://127.0.0.1:6379")
+	worker.UseRedisBroker(&redis.Options{
+		Addr: "127.0.0.1:6379",
+		DB:   0,
+	})
 	worker.SetErrorHandler(func(i interface{}) {
 		fmt.Println(i)
 	})

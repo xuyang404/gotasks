@@ -1,6 +1,7 @@
 package gotasks
 
 import (
+	"github.com/go-redis/redis"
 	"github.com/xuyang404/gotasks/brokers"
 	"github.com/xuyang404/gotasks/tasks"
 	"log"
@@ -33,8 +34,8 @@ func (w *Worker) SetBroker(broker brokers.Broker) {
 	w.broker = broker
 }
 
-func (w *Worker) UseRedisBroker(redisURL string) {
-	rb := brokers.NewRedisBroker(redisURL)
+func (w *Worker) UseRedisBroker(options *redis.Options) {
+	rb := brokers.NewRedisBroker(options)
 	w.SetBroker(rb)
 }
 
