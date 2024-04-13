@@ -7,7 +7,7 @@ import (
 	"runtime"
 )
 
-type TaskHandler func(tasks.ArgsMap) (tasks.ArgsMap, error)
+type TaskHandler func(task *tasks.Task) (tasks.ArgsMap, error)
 
 type ReentrantOptions struct {
 	maxLimit int //最大重试次数

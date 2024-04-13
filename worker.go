@@ -94,7 +94,7 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 
 		if ok {
 			for i := 0; i < reentrant.maxLimit; i++ {
-				argMap, err = handler(task.OriginalArgsMap)
+				argMap, err = handler(task)
 				if err == nil {
 					break
 				}
@@ -102,7 +102,7 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 				time.Sleep(time.Duration(reentrant.sleepMs) * time.Millisecond)
 			}
 		} else {
-			argMap, err = handler(task.OriginalArgsMap)
+			argMap, err = handler(task)
 		}
 
 		if err != nil {
@@ -116,7 +116,7 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 			w.taskMapLock.Unlock()
 		}
 
-		task.ArgsMap = append(task.ArgsMap, argMap)
+		task.Result = append(task.Result, argMap)
 		task.UpdateAt = time.Now().Format("2006-01-02 15:04:05")
 
 		if err := w.broker.Update(task); err != nil {

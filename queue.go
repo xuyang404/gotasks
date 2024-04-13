@@ -11,10 +11,8 @@ type Queue struct {
 	Name   string
 }
 
-func NewQueue(Name string) *Queue {
-	return &Queue{
-		Name: Name,
-	}
+func NewQueue() *Queue {
+	return &Queue{}
 }
 
 func (q *Queue) SetBroker(broker brokers.Broker) {
@@ -26,7 +24,6 @@ func (q *Queue) UseRedisBroker(options *redis.Options) {
 	q.SetBroker(rb)
 }
 
-func (q *Queue) Enqueue(taskName string, args tasks.ArgsMap) (string, error) {
-	task := tasks.NewTask(q.Name, taskName, args)
+func (q *Queue) Enqueue(task *tasks.Task) (string, error) {
 	return q.broker.Enqueue(task)
 }

@@ -9,14 +9,15 @@ import (
 )
 
 func TestQueue(t *testing.T) {
-	queue := gotasks.NewQueue("test_queue")
+	queue := gotasks.NewQueue()
 	queue.UseRedisBroker(&redis.Options{
 		Addr: "127.0.0.1:6379",
 	})
-	taskID, err := queue.Enqueue("add", tasks.ArgsMap{
+	task := tasks.NewTask("test_queue", "add", tasks.ArgsMap{
 		"args1": 1,
 		"args2": 2,
 	})
+	taskID, err := queue.Enqueue(task)
 	if err != nil {
 		t.Fatal(err)
 	}

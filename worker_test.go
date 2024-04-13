@@ -23,10 +23,12 @@ func TestWorker(t *testing.T) {
 		fmt.Println(i)
 	})
 	//
-	add := func(args tasks.ArgsMap) (tasks.ArgsMap, error) {
+	add := func(task *tasks.Task) (tasks.ArgsMap, error) {
 		m := map[string]int{}
 
-		err := tasks.ArgsMapTo(args, &m)
+		fmt.Println("taskId", task.ID)
+
+		err := tasks.ArgsMapTo(task.ArgsMap, &m)
 		if err != nil {
 			return nil, err
 		}
@@ -41,10 +43,10 @@ func TestWorker(t *testing.T) {
 		return am, nil
 	}
 
-	multiplication := func(args tasks.ArgsMap) (tasks.ArgsMap, error) {
+	multiplication := func(task *tasks.Task) (tasks.ArgsMap, error) {
 
 		mul := &Mul{}
-		err := tasks.ArgsMapTo(args, mul)
+		err := tasks.ArgsMapTo(task.ArgsMap, mul)
 		if err != nil {
 			return nil, err
 		}
