@@ -26,6 +26,7 @@ func TestWorker(t *testing.T) {
 	add := func(task *tasks.Task) (tasks.ArgsMap, error) {
 		m := map[string]int{}
 
+		panic(123)
 		fmt.Println("taskId", task.ID)
 
 		err := tasks.ArgsMapTo(task.ArgsMap, &m)
