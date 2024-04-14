@@ -1,6 +1,7 @@
 package gotasks
 
 import (
+	"fmt"
 	"github.com/go-redis/redis"
 	"github.com/xuyang404/gotasks/brokers"
 	"github.com/xuyang404/gotasks/tasks"
@@ -33,6 +34,9 @@ func NewWorker() *Worker {
 		taskMap:      make(map[string][]TaskHandler),
 		reentrantMap: make(map[string]*ReentrantOptions),
 		deathQueue:   "gt:deathQueue",
+		errorHandler: func(i interface{}) {
+			fmt.Println("errorHandler:", i)
+		},
 	}
 }
 
