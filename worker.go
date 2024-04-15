@@ -72,7 +72,9 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 	defer func() {
 		if r := recover(); r != nil {
 			task.PanicLog = string(debug.Stack())
-			task.QueueName = w.deathQueue
+			if w.deathQueue != "" {
+				task.QueueName = w.deathQueue
+			}
 			w.broker.Enqueue(task) //再塞回队列重试
 		}
 	}()
