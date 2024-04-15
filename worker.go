@@ -151,7 +151,7 @@ func (w *Worker) Listen(queueName string, concurrency int) {
 }
 
 func (w *Worker) listen(queueName string, concurrency int) {
-	log.Println("Listening......")
+	log.Println(fmt.Sprintf("Listening %s......", queueName))
 	pool := NewWaitGo(concurrency)
 	pool.PanicHandler = w.errorHandler
 	defer pool.Wait()
