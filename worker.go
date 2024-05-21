@@ -18,10 +18,10 @@ type Worker struct {
 	reentrantMap  map[string]*ReentrantOptions
 	taskMapLock   sync.RWMutex
 	reentrantLock sync.RWMutex
-	panicHandler  func(*tasks.Task)
+	panicHandler  func(*tasks.Task, *Worker)
 }
 
-func (w *Worker) SetPanicHandler(panicHandler func(*tasks.Task)) {
+func (w *Worker) SetPanicHandler(panicHandler func(*tasks.Task, *Worker)) {
 	w.panicHandler = panicHandler
 }
 
@@ -72,7 +72,7 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 		if r := recover(); r != nil {
 			task.PanicLog = string(debug.Stack())
 			if w.panicHandler != nil {
-				w.panicHandler(task)
+				w.panicHandler(task, w)
 			} else {
 				log.Printf("panic recovered: %v", r)
 				// w.broker.Enqueue(task) //再塞回队列重试
