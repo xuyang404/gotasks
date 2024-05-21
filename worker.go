@@ -74,7 +74,7 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 			if w.panicHandler != nil {
 				w.panicHandler(task, w)
 			} else {
-				log.Printf("panic recovered: %v", r)
+				log.Printf("panic recovered: %v\n", r)
 				// w.broker.Enqueue(task) //再塞回队列重试
 			}
 		}
