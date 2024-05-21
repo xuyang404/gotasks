@@ -18,11 +18,11 @@ type Worker struct {
 	reentrantMap  map[string]*ReentrantOptions
 	taskMapLock   sync.RWMutex
 	reentrantLock sync.RWMutex
-	deathQueue    string
+	panicHandler  func(*tasks.Task)
 }
 
-func (w *Worker) SetDeathQueue(deathQueue string) {
-	w.deathQueue = deathQueue
+func (w *Worker) SetPanicHandler(panicHandler func(*tasks.Task)) {
+	w.panicHandler = panicHandler
 }
 
 func (w *Worker) SetErrorHandler(errorHandler func(interface{})) {
@@ -33,7 +33,6 @@ func NewWorker() *Worker {
 	return &Worker{
 		taskMap:      make(map[string][]TaskHandler),
 		reentrantMap: make(map[string]*ReentrantOptions),
-		deathQueue:   "gt:deathQueue",
 		errorHandler: func(i interface{}) {
 			fmt.Println("errorHandler:", i)
 		},
@@ -72,10 +71,12 @@ func (w *Worker) handlerTask(task *tasks.Task) {
 	defer func() {
 		if r := recover(); r != nil {
 			task.PanicLog = string(debug.Stack())
-			if w.deathQueue != "" {
-				task.QueueName = w.deathQueue
+			if w.panicHandler != nil {
+				w.panicHandler(task)
+			} else {
+				log.Printf("panic recovered: %v", r)
+				// w.broker.Enqueue(task) //再塞回队列重试
 			}
-			w.broker.Enqueue(task) //再塞回队列重试
 		}
 	}()
 
