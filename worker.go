@@ -43,6 +43,10 @@ func (w *Worker) SetBroker(broker brokers.Broker) {
 	w.broker = broker
 }
 
+func (w *Worker) GetBroker() brokers.Broker {
+	return w.broker
+}
+
 func (w *Worker) UseRedisBroker(options *redis.Options) {
 	rb := brokers.NewRedisBroker(options)
 	w.SetBroker(rb)
